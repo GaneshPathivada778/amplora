@@ -1,0 +1,2 @@
+export function Avatar({name,index=0,small=false}:{name:string,index?:number,small?:boolean}){return <span className={`avatar avatar-${index%5} ${small?"avatar-sm":""}`}>{name.split(" ").map(n=>n[0]).slice(0,2).join("")}</span>}
+export function Status({value}:{value:string}){return <span className={`status status-${value.toLowerCase().replaceAll(" ","-")}`}>{value==="Active"&&<span className="status-dot"/>}{value}</span>}
